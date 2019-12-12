@@ -66,7 +66,7 @@
                 items: [
                     {
                         icon: 'el-icon-lx-home',
-                        index: 'dashboard',
+                        index: 'index',
                         title: '系统首页'
                     },
                     {
@@ -76,15 +76,11 @@
                         subs: [
                             {
                                 index: 'form',
-                                title: '基础数据'
+                                title: '统计分析'
                             },
                             {
                                 index: '3-2',
-                                title: '历史数据'
-                            },
-                            {
-                                index: 'upload',
-                                title: '统计分析'
+                                title: '基础数据'
                             },
                             {
                                 index: 'upload',
@@ -95,12 +91,21 @@
                     {
                         icon: 'el-icon-lx-copy',
                         index: 'tabs',
-                        title: '文献管理'
-                    },
-                    {
-                        icon: 'el-icon-lx-calendar',
-                        index: '3',
-                        title: '不定期监测管理'
+                        title: '文档管理',
+                        subs: [
+                            {
+                                index: 'form',
+                                title: '研究文献'
+                            },
+                            {
+                                index: '3-2',
+                                title: '监测报告'
+                            },
+                            {
+                                index: 'upload',
+                                title: '相关文件'
+                            }
+                        ]
                     },
                     {
                         icon: 'el-icon-lx-emoji',
@@ -117,7 +122,11 @@
                             },
                             {
                                 index: 'upload',
-                                title: '断电记录'
+                                title: '设备异常管理'
+                            },
+                            {
+                                index: 'upload',
+                                title: '设备信息管理'
                             }
                         ]
                     },

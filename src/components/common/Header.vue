@@ -5,13 +5,11 @@
             <i v-if="!collapse" class="el-icon-s-fold"></i>
             <i v-else class="el-icon-s-unfold"></i>
         </div>
-        <!--<img src="../../assets/img/header-logo.png"/>-->
         <div class="logo">
             <a href="index.html" class="on-click">
                 <img alt="logo" src="../../assets/img/header-logo.png"/>
             </a>
         </div>
-        <!--<div class="logo">后台管理系统</div>-->
         <div class="header-right">
             <div class="header-user-con">
                 <!-- 全屏显示 -->
@@ -40,6 +38,8 @@
                 <!-- 用户名下拉菜单 -->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
                     <span class="el-dropdown-link">
+                        <!--${department}-->
+                        <!--${message}-->
                         {{username}}
                         <i class="el-icon-caret-bottom"></i>
                     </span>
@@ -62,7 +62,8 @@ export default {
             collapse: false,
             fullscreen: false,
             name: 'linxin',
-            message: 2
+            message: 2,
+            department:'资料信息部'
         };
     },
     computed: {
