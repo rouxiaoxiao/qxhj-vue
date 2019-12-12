@@ -20,92 +20,99 @@ export default new Router({
                     meta: { title: '系统首页' }
                 },
                 {
-                    path: '/icon',
-                    component: () => import(/* webpackChunkName: "icon" */ '../components/page/Icon.vue'),
-                    meta: { title: '自定义图标' }
+                    path: '/statistics',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Statistics.vue'),
+                    meta: { title: '统计分析' }
                 },
                 {
-                    path: '/table',
-                    component: () => import(/* webpackChunkName: "table" */ '../components/page/BaseTable.vue'),
-                    meta: { title: '基础表格' }
-                },
-                {
-                    path: '/tabs',
-                    component: () => import(/* webpackChunkName: "tabs" */ '../components/page/Tabs.vue'),
-                    meta: { title: 'tab选项卡' }
-                },
-                {
-                    path: '/form',
-                    component: () => import(/* webpackChunkName: "form" */ '../components/page/BaseForm.vue'),
-                    meta: { title: '基本表单' }
-                },
-                {
-                    // 富文本编辑器组件
-                    path: '/editor',
-                    component: () => import(/* webpackChunkName: "editor" */ '../components/page/VueEditor.vue'),
-                    meta: { title: '富文本编辑器' }
-                },
-                {
-                    // markdown组件
-                    path: '/markdown',
-                    component: () => import(/* webpackChunkName: "markdown" */ '../components/page/Markdown.vue'),
-                    meta: { title: 'markdown编辑器' }
-                },
-                {
-                    // 图片上传组件
-                    path: '/upload',
-                    component: () => import(/* webpackChunkName: "upload" */ '../components/page/Upload.vue'),
-                    meta: { title: '文件上传' }
-                },
-                {
-                    // vue-schart组件
-                    path: '/charts',
-                    component: () => import(/* webpackChunkName: "chart" */ '../components/page/BaseCharts.vue'),
-                    meta: { title: 'schart图表' }
-                },
-                {
-                    // 拖拽列表组件
-                    path: '/drag',
-                    component: () => import(/* webpackChunkName: "drag" */ '../components/page/DragList.vue'),
-                    meta: { title: '拖拽列表' }
-                },
-                {
-                    // 拖拽Dialog组件
-                    path: '/dialog',
-                    component: () => import(/* webpackChunkName: "dragdialog" */ '../components/page/DragDialog.vue'),
-                    meta: { title: '拖拽弹框' }
-                },
-                {
-                    // 国际化组件
-                    path: '/i18n',
-                    component: () => import(/* webpackChunkName: "i18n" */ '../components/page/I18n.vue'),
-                    meta: { title: '国际化' }
-                },
-                {
-                    // 权限页面
-                    path: '/permission',
-                    component: () => import(/* webpackChunkName: "permission" */ '../components/page/Permission.vue'),
-                    meta: { title: '权限测试', permission: true }
-                },
-                {
-                    path: '/404',
-                    component: () => import(/* webpackChunkName: "404" */ '../components/page/404.vue'),
-                    meta: { title: '404' }
-                },
-                {
-                    path: '/403',
-                    component: () => import(/* webpackChunkName: "403" */ '../components/page/403.vue'),
-                    meta: { title: '403' }
-                },
-                {
-                    path: '/donate',
-                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/Donate.vue'),
-                    meta: { title: '支持作者' }
-                },
-                {
-                    path: '/index',
+                    path: '/basicData',
                     component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
-                    meta: { title: '系统首页' }
+                    meta: { title: '基础数据' }
+                },
+                {
+                    path: '/abnormalData',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '异常数据' }
+                },
+                {
+                    path: '/researchPaper',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '研究文献' }
+                },
+                {
+                    path: '/monitoringReport',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '检测报告' }
+                },
+                {
+                    path: '/relatedDocuments',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '相关文件' }
+                },
+                {
+                    path: '/maintenanceRecords',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '维护保养记录管理' }
+                },
+                {
+                    path: '/maintenancePlan',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '维护保养计划管理' }
+                },
+                {
+                    path: '/deviceAbnormal',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '设备异常管理' }
+                },
+                {
+                    path: '/deviceInformation',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '设备信息管理' }
+                },
+                {
+                    path: '/dataAbnormalAlarm',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '数据异常报警' }
+                },
+                {
+                    path: '/extremeWeatherAlarm',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '极端天气报警' }
+                },
+                {
+                    path: '/jobSuggestions',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '工作建议管理' }
+                },
+                {
+                    path: '/dataDictionary',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '数据字典维护' }
+                },
+                {
+                    path: '/dataThreshold',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '数据正常阈值管理' }
+                },
+                {
+                    path: '/extremeWeatherThreshold',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '极端天气阈值管理' }
+                },
+                {
+                    path: '/operationLog',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '操作日志' }
+                },
+                {
+                    path: '/automaticRecordingLog',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '系统自动记录' }
+                },
+                {
+                    path: '/level',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
+                    meta: { title: '级别管理' }
                 }
             ]
         },

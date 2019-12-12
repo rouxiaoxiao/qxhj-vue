@@ -38,8 +38,7 @@
                 <!-- 用户名下拉菜单 -->
                 <el-dropdown class="user-name" trigger="click" @command="handleCommand">
                     <span class="el-dropdown-link">
-                        <!--${department}-->
-                        <!--${message}-->
+                        {{department}}&nbsp;&nbsp;
                         {{username}}
                         <i class="el-icon-caret-bottom"></i>
                     </span>
@@ -137,7 +136,7 @@ export default {
 }
 .header .logo {
     float: left;
-    width: 960px;
+    width: 80px;
     line-height: 70px;
     height: 70px;
 }

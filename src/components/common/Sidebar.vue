@@ -11,6 +11,7 @@
                 router
         >
             <template v-for="item in items">
+                <!--如果有孩子节点-->
                 <template v-if="item.subs">
                     <el-submenu :index="item.index" :key="item.index">
                         <template slot="title">
@@ -32,6 +33,7 @@
 
 
 
+
                                 </el-menu-item>
                             </el-submenu>
                             <el-menu-item
@@ -42,10 +44,12 @@
 
 
 
+
                             </el-menu-item>
                         </template>
                     </el-submenu>
                 </template>
+                <!--如果没有孩子节点-->
                 <template v-else>
                     <el-menu-item :index="item.index" :key="item.index">
                         <i :class="item.icon"></i>
@@ -66,220 +70,126 @@
                 items: [
                     {
                         icon: 'el-icon-lx-home',
-                        index: 'index',
+                        index: 'dashboard',
                         title: '系统首页'
                     },
                     {
                         icon: 'el-icon-lx-cascades',
-                        index: 'table',
+                        index: 'data',
                         title: '数据管理',
                         subs: [
                             {
-                                index: 'form',
+                                index: 'statistics',
                                 title: '统计分析'
                             },
                             {
-                                index: '3-2',
+                                index: 'basicData',
                                 title: '基础数据'
                             },
                             {
-                                index: 'upload',
+                                index: 'abnormalData',
                                 title: '异常数据'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-lx-copy',
-                        index: 'tabs',
+                        index: 'document',
                         title: '文档管理',
                         subs: [
                             {
-                                index: 'form',
+                                index: 'researchPaper',
                                 title: '研究文献'
                             },
                             {
-                                index: '3-2',
+                                index: 'monitoringReport',
                                 title: '监测报告'
                             },
                             {
-                                index: 'upload',
+                                index: 'relatedDocuments',
                                 title: '相关文件'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-lx-emoji',
-                        index: 'icon',
+                        index: 'device',
                         title: '设备管理',
                         subs: [
                             {
-                                index: 'form',
+                                index: 'maintenanceRecords',
                                 title: '维护保养记录管理'
                             },
                             {
-                                index: '3-2',
+                                index: 'maintenancePlan',
                                 title: '维护保养计划管理'
                             },
                             {
-                                index: 'upload',
+                                index: 'deviceAbnormal',
                                 title: '设备异常管理'
                             },
                             {
-                                index: 'upload',
+                                index: 'deviceInformation',
                                 title: '设备信息管理'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-pie-chart',
-                        index: 'charts',
+                        index: 'alarm',
                         title: '报警管理',
                         subs: [
                             {
-                                index: 'form',
+                                index: 'dataAbnormalAlarm',
                                 title: '数据异常报警'
                             },
                             {
-                                index: '3-2',
+                                index: 'extremeWeatherAlarm',
                                 title: '极端天气报警'
                             }
                         ]
                     },
                     {
                         icon: 'el-icon-rank',
-                        index: '6',
+                        index: 'system',
                         title: '系统管理',
                         subs: [
                             {
-                                index: 'drag',
+                                index: 'jobSuggestions',
                                 title: '工作建议管理'
                             },
                             {
-                                index: 'dialog',
+                                index: 'dataDictionary',
                                 title: '数据字典维护'
                             },
                             {
-                                index: 'drag',
+                                index: 'dataThreshold',
                                 title: '数据正常阈值管理'
                             },
                             {
-                                index: 'dialog',
+                                index: 'extremeWeatherThreshold',
                                 title: '极端天气阈值管理'
                             },
                             {
                                 index: 'drag',
-                                title: '系统日志',
+                                title: 'systemLog',
                                 subs: [
                                     {
-                                        index: 'drag',
+                                        index: 'operationLog',
                                         title: '操作日志'
                                     },
                                     {
-                                        index: 'dialog',
+                                        index: 'automaticRecordingLog',
                                         title: '系统自动记录'
                                     }
                                 ]
                             },
                             {
-                                index: 'dialog',
+                                index: 'level',
                                 title: '级别管理'
                             }
                         ]
-                    },
-//                    {
-//                        icon: 'el-icon-lx-home',
-//                        index: 'dashboard',
-//                        title: '系统首页'
-//                    },
-//                    {
-//                        icon: 'el-icon-lx-cascades',
-//                        index: 'table',
-//                        title: '基础表格'
-//                    },
-//                    {
-//                        icon: 'el-icon-lx-copy',
-//                        index: 'tabs',
-//                        title: 'tab选项卡'
-//                    },
-//                    {
-//                        icon: 'el-icon-lx-calendar',
-//                        index: '3',
-//                        title: '表单相关',
-//                        subs: [
-//                            {
-//                                index: 'form',
-//                                title: '基本表单'
-//                            },
-//                            {
-//                                index: '3-2',
-//                                title: '三级菜单',
-//                                subs: [
-//                                    {
-//                                        index: 'editor',
-//                                        title: '富文本编辑器'
-//                                    },
-//                                    {
-//                                        index: 'markdown',
-//                                        title: 'markdown编辑器'
-//                                    }
-//                                ]
-//                            },
-//                            {
-//                                index: 'upload',
-//                                title: '文件上传'
-//                            }
-//                        ]
-//                    },
-//                    {
-//                        icon: 'el-icon-lx-emoji',
-//                        index: 'icon',
-//                        title: '自定义图标'
-//                    },
-//                    {
-//                        icon: 'el-icon-pie-chart',
-//                        index: 'charts',
-//                        title: 'schart图表'
-//                    },
-//                    {
-//                        icon: 'el-icon-rank',
-//                        index: '6',
-//                        title: '拖拽组件',
-//                        subs: [
-//                            {
-//                                index: 'drag',
-//                                title: '拖拽列表'
-//                            },
-//                            {
-//                                index: 'dialog',
-//                                title: '拖拽弹框'
-//                            }
-//                        ]
-//                    },
-//                    {
-//                        icon: 'el-icon-lx-global',
-//                        index: 'i18n',
-//                        title: '国际化功能'
-//                    },
-//                    {
-//                        icon: 'el-icon-lx-warn',
-//                        index: '7',
-//                        title: '错误处理',
-//                        subs: [
-//                            {
-//                                index: 'permission',
-//                                title: '权限测试'
-//                            },
-//                            {
-//                                index: '404',
-//                                title: '404页面'
-//                            }
-//                        ]
-//                    },
-//                    {
-//                        icon: 'el-icon-lx-redpacket_fill',
-//                        index: '/donate',
-//                        title: '支持作者'
-//                    }
+                    }
                 ]
             };
         },
