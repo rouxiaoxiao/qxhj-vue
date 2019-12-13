@@ -113,6 +113,11 @@ export default new Router({
                     path: '/level',
                     component: () => import(/* webpackChunkName: "dashboard" */ '../components/page/Index.vue'),
                     meta: { title: '级别管理' }
+                },
+                {
+                    path: '/404',
+                    component: () => import(/* webpackChunkName: "404" */ '../components/page/404.vue'),
+                    meta: { title: '404' }
                 }
             ]
         },
